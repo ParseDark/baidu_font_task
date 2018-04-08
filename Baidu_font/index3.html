@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "description" content = "百度前端学院的练习">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <title>Document</title>
+    <script src="./js/index3.js"></script>
+    <style>
+                html,
+        body,
+        div,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        dl,
+        dt,
+        dd,
+        ol,
+        form,
+        input,
+        textarea,
+        th,
+        td,
+        select {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        ul,li {
+            list-style: none;
+        }
+        
+        html,body{  
+            height: 100%;  
+            margin: 0;  
+            padding: 0;  
+        }  
+        /* input, button, select, textarea {
+            outline: none;
+            -webkit-appearance: none;
+            border-radius: 0;
+            }
+             */
+        input,textarea{
+            outline: none;
+            border: none;
+            }
+        body {
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+            background-color: #333333;
+        }
+        h1 {
+            font-size: 38px;
+        }
+        header {
+            overflow:auto;
+            background-color: #333333;
+            width: 80%;
+            margin: 0 auto;
+        }
+        header section {
+            width: 80px;
+            float: left;
+        }
+        .logo_icon {
+            width: 60px;
+            height: 60px;
+        }
+        header>nav{
+            float: right;
+        }
+        header>nav>ul>li{
+            float: left;
+            color: white;
+            font-size: 16px;
+            margin-right: 20px;
+            height: 64px;
+            line-height: 64px;
+            font-weight: bold;
+        }
+        #main_content {
+            width: 100%;
+            background-color: #dedede;
+            margin: 0 auto;
+            padding: 20px 0 10px 0px;
+        }
+        #box {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+
+        }
+        #box>article {
+            margin-top: 20px;
+            padding: 20px 20px;
+        }
+         #box>article:first-child {
+             margin-top: 0px;
+         }
+        #box>article:last-child {
+
+         }
+        #article_one h2{
+            font-size: 21px;
+            color:gainsboro;
+           
+        }
+        #article_one aside,#article_two aside,#the_last aside {
+            padding: 10px 0;
+            color: gainsboro;
+        }
+        #article_two ul {
+            margin-left: 40px;
+        }
+        #the_last {
+            margin-bottom: 20px;
+        }
+        
+        #the_last table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #the_last tr th {
+            background-color:dimgray;
+            color:white;
+            border: 1px solid white;
+        }
+
+        #the_last tr {
+            width: 100%;
+        }
+
+        #the_last tr td {
+            border:1px solid grey;
+            width: 20%;
+        }
+        #the_last tr:last-child td:last-child {
+            width: auto;
+        }
+        .section_article {
+            width: 70%;
+            background-color: white;
+        }
+        #article_two h2{
+             font-size: 21px;
+             color:gainsboro;
+        }
+        #the_last h2 {
+            font-size: 21px;
+            color:gainsboro;
+        }
+
+        #img_arr .img_box {
+            overflow: hidden;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px 10px;
+        }
+
+        #img_arr>section>section {
+            width: 200px;
+            float: left;
+            padding: 10px 10px;
+        }
+
+
+        #sidebar {
+            width: 25%;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            background-color: white;
+            padding: 20px 10px;
+        }
+        #sidebar  .submit_btn {
+            width:100%;
+            height: 30px;
+            background-color:#189;
+            color: snow;
+            text-align: center;
+            line-height:30px;
+            margin-top:20px;
+            border-radius: 4px;
+        }
+        #sidebar input[type*="text"], #sidebar select{
+            width:80%;
+            height: 30px;
+            position: relative;
+            z-index: 5;
+            top:3px;
+            margin-left:10px;
+        }
+        #sidebar label {
+            margin: 0 10px 0 0;
+        }
+        #sidebar .input_box {
+            position: absolute;
+            width: 85%;
+            height: 35px;
+            top: 0px;
+            padding: 10px 10px;
+            border: 1px solid #189;
+            border-radius: 5px;
+        }
+        #sidebar .input_box_area {
+            position: absolute;
+            height: 100px;
+            margin: 5px 0 0 20px;
+            width: 90%;
+            height: 100px;
+            top: 0px;
+            padding: 10px 10px;
+            border: 1px solid #189;
+            border-radius: 5px;
+        }
+        #sidebar .input_box_ textarea {
+
+        }
+        #sidebar .input_box_ {
+            position: relative;
+            margin:5px 0px 10px 15px; 
+        }
+        #sidebar .input_box_ z{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: inline-block;
+            position: relative;
+            top: 4px;
+            margin-left: 10px;
+            box-shadow: 0 0 0 2px #fff,0 0 0 4px #189;
+        }
+        #sidebar section span {
+           position: relative;
+           top: 5px;
+           margin-left:10px;
+           color: dimgray;
+        }
+        #sidebar h4 {
+            margin: 10px 0px;
+        }
+        #sidebar textarea {
+            width: 83%;
+            height: 95px;
+            margin: 8px 0 0 30px;
+            z-index: 10;
+            position: relative;
+        }
+        #sidebar .draw_down {
+            width: 0;
+            height: 0;
+            border-width: 9px;
+            border-style: solid;
+            border-color: #189 transparent transparent transparent;
+            position: absolute;
+            right: 5px;
+            top: 11px;
+            z-index: 10;
+            
+        }
+        #sidebar .active {
+            display: block !important;
+        }
+        #sidebar .input_box_ .draw_box {
+            border: 1px solid #189;
+            width: 85%;
+            border-radius: 5px;
+            position: absolute;
+            top: 40px;
+            height: 140px;
+            background-color: white;
+            display: none;
+            z-index: 5;
+        }
+        #sidebar .input_box_ .draw_box ul {
+            width: 100%;
+        }
+        #sidebar .input_box_ .draw_box ul li {
+            width: calc(100% - 10);
+            height: 35px;
+            box-sizing: border-box;
+            line-height: 35px;
+            padding-left: 10px;
+        }
+        #sidebar .input_box_ .draw_box ul li:hover {
+            background-color: #189;
+        }
+        #sidebar .input_box_ bo {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            position: relative;
+            top: 4px;
+            margin-left: 10px;
+            /* background-color: #189; */
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #189;
+        }
+
+        footer {
+            width: 80%;
+            height: 50px;
+            margin: 0 auto;
+    
+        }
+        footer address {
+            color: white;
+            text-align: center;
+            padding-top: 15.5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+            <img src="./imges/post.png" class="logo_icon" alt="">
+        </section>
+        <nav>
+            <ul>
+                <li>首页</li>
+                <li>文章合集</li>
+                <li>作者信息</li>
+                <li>帮助</li>
+            </ul>
+        </nav>
+    </header>
+    <section id = "main_content">
+        <section id = "box">
+        <article id="article_one" class = "section_article">
+            <h1>This is head 1</h1>
+            <h2>This is head 2</h2>
+            <aside>mylife</aside>
+            <p>Lorem ipsum dolor sit amet <b>this is blod</b>consectetur adipisicing elit. Aspernatur obcaecati hic deleniti incidunt fuga perferendis ut rem est saepe beatae. Officia, harum ea. Amet provident nostrum pariatur recusandae quae quisquam.</p>
+            <p>Lorem ipsum dolor <a href="#">this is link</a>sit amet consectetur adipisicing elit. Aspernatur obcaecati hic deleniti incidunt fuga perferendis ut remest saepe beatae. Officia, harum ea. Amet provident nostrum pariatur recusandae quae quisquam.</p>
+            <img src="./imges/post.png" alt="">
+        </article>
+        <article id = "article_two" class = "section_article">
+            <h1>This is head 1</h1>
+            <h2>This is head 2</h2>
+            <aside>mylife</aside>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur obcaecati hic deleniti incidunt fuga perferendis ut rem est saepe beatae. Officia, harum ea. Amet provident nostrum pariatur recusandae quae quisquam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur obcaecati hic deleniti incidunt fuga perferendis ut rem est saepe beatae. Officia, harum ea. Amet provident nostrum pariatur recusandae quae quisquam.</p>
+            <img src="./imges/post.png" alt="">
+            <ul>
+                <li>条目1</li>
+                <li>条目2</li>
+                <li>条目3</li>
+            </ul>
+        </article>
+        <article id = "img_arr" class = "section_article">
+            <h1>图片</h1>
+            <section class = "img_box">
+                
+            </section>
+        </article>
+        <article id = "the_last" class = "section_article">
+            <h1>This is head 1</h1>
+            <h2>This is head 2</h2>
+            <aside>mylife</aside>
+            <section>
+                <ul>
+                    <ol>1条目</ol>
+                    <ol>2条目</ol>
+                    <ol>3条目</ol>
+                </ul>
+                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quos ea laudantium doloremque, fuga maiores qui, possimus
+                    enim dolore molestias eum amet. Neque odit cupiditate ad nobis nostrum id voluptates.</span>
+                <table>
+                    <tr>
+                        <th>表头</th>
+                        <th>表头</th>
+                        <th>表头</th>
+                    </tr>
+                    <tr>
+                        <td>something</td>
+                        <td>something</td>
+                        <td>something</td>
+                    </tr>
+                    <tr>
+                        <td>something</td>
+                        <td>something</td>
+                        <td>something</td>
+                    </tr>
+                    <tr>
+                        <td>something</td>
+                        <td>something</td>
+                        <td>something</td>
+                    </tr>
+                    <tr>
+                        <td>总计</td>
+                        <td colspan = "2">1000</td>
+                    </tr>
+                </table>
+            </section>
+        </article>
+        <section id="sidebar">
+            <aside>
+                <section>
+                    <h4>这里是侧边栏</h4>
+                    <section class="form_content">
+                        <form action="">
+                            <label for="mail">请输入邮箱</label>
+                            <section class = "input_box_" >
+                                <input type="text" id="mail" placeholder="这是一个文本输入框">
+                                <section class = "input_box"></section>
+                            </br>
+                                <span>请按照邮箱格式输入。</span>
+                            </section>
+                            <label for="passwd">请输入密码</label>
+                            <section class = "input_box_" >
+                                <section class="input_box"></section>
+                                <input type="text" id="passwd" placeholder="请输入密码">
+                                </br>
+                            </section>
+                            
+                           
+                                <label for="confirmPasswd">请再次输入密码</label>
+                            <section class="input_box_">
+                                <section class = "input_box"></section>
+                                <input type="text" id="confirmPasswd" placeholder="请确认密码">
+                                </br>
+                            </section>
+                           
+                                <label for="sex">请选择性别</label>
+                            <section class="input_box_">
+                                <z class="radio"></z>
+                                <span>男</span>
+                                <z class="radio"></z>
+                                <span>女</span>
+                            </section>
+                            <label for="city">城市</label>
+                            <section class="input_box_">
+                                <section class = "input_box city_chioce">
+                                    <section class = "draw_down"></section>
+                                </section>
+                                <section class="draw_box">
+                                    <ul>
+                                        <li>北京</li>
+                                        <li>上海</li>
+                                        <li>深圳</li>
+                                        <li>广州</li>
+                                    </ul>
+                                </section>
+                                <input type="text" id="choose_city" readonly="readonly">
+                                </br>
+                            </section>
+
+
+                            </section>
+                            </br>
+                            <label for="vehhicle">爱好</label>
+                            <section class="input_box_">
+                                <bo class = "choose_box"></bo>
+                                <span>游泳</span>
+                                <bo class = "choose_box"></bo>
+                                <span>舞蹈</span>
+                                <bo class = "choose_box"></bo>
+                                <span>篮球</span>
+                                <bo class = "choose_box"></bo>
+                                <span>健身</span>
+                            </section>
+                            </br>
+                            <label for="">个人描述</label>
+                            </br>
+                            <section class="input_box_">
+                                <section class="input_box_area"></section>
+                                <textarea></textarea>
+                            </section>
+                                
+                            <section class= "submit_btn" >点击提交</section> 
+                        </form>
+                    </section>
+                </section>
+            </aside>
+        </section>
+        </section>
+            
+    </section>
+
+
+    <footer>
+        <address>@版权所有</address>
+    </footer>
+</body>
+</html>

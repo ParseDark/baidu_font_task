@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./js/">
+    <link rel="stylesheet" href="./js/jquery-3.3.1.js">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <style>
+        html,
+        body,
+        div,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        dl,
+        dt,
+        dd,
+        ol,
+        form,
+        input,
+        textarea,
+        th,
+        td,
+        select {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+            color: #333;
+        }
+        .main {
+            position: relative;
+        }
+        .box {
+            width: 90%;
+            border: 1px solid #f51f56;
+            float: left;
+            /* position: absolute;top:50%;left: 50%;
+            margin-left: -607px; */
+        }
+
+        .logo_box {
+            width: 200px;
+            margin: 10px 20px;
+            float: left;
+            border:1px solid red;
+        }
+
+        #logo {
+            width: 80px;
+            height: 80px;
+            float: left;
+            
+        }
+
+        .tag_left {
+            float: right;
+            width: 120px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid red;
+
+        }
+
+        .tag_left .img_arr img {
+
+            width: 100px;
+            height: 100px;
+        }
+
+        .img_arr {
+
+        }
+
+        .clear {
+            clear: both;
+        }
+        .content_box {
+            margin: 20px 130px 20px 220px;
+        }
+        .content_main {
+            min-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="logo_box">
+                <img id="logo" src="./imges/post.png" alt="">
+                <span class="teamName">韦海东是未来的大神</span>
+            </div>
+            <div class="tag_left">
+                <div class="img_arr">
+                    <img src="./imges/post.png">
+                </div>
+            </div>
+            <div class="content_box">
+                <h3>这是我的团队，我会为他们骄傲，为他们鼓掌。</h3>
+                <div class="content_main">
+                    <p>这是我的团队，我会为他们骄傲，为他们鼓掌。这是我的团队，我会为他们骄傲，为他们鼓掌。这是我的团队，我会为他们骄傲，为他们鼓掌。这是我的团队，我会为他们骄傲，为他们鼓掌。这是我的团队，我会为他们骄傲，为他们鼓掌。这是我的团队，我会为他们骄傲，为他们鼓掌。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var imag_arr = document.querySelector(".img_arr");
+    var str_img = "";
+    for (let i = 0; i < 4; i++) {
+        str_img += "<img src = '" + "./imges/post.png' alt = '" + "这里是个人展示图片'>";
+    }
+    imag_arr.innerHTML = str_img;
+    var box = document.querySelector(".box");
+</script>
+
+</html>
