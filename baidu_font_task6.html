@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/main.js"></script>
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        div,
+        ul,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        dl,
+        dt,
+        dd,
+        ol,
+        form,
+        input,
+        textarea,
+        th,
+        td,
+        select {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "黑体";
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        header,
+        article,
+        footer {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        header .red_box {
+            width: 110px;
+            height: 61px;
+            background-color: salmon;
+            position: relative;
+            display: inline-block;
+        }
+        header .red_box span {
+            position: absolute;
+            bottom: 0px;
+            color: #fff;
+        }
+
+        header .data {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            height: 60px;
+            line-height: 90px;
+            color: salmon;
+        }
+
+        header hr {
+            margin: 0px;
+            position: absolute;
+            width: 100%;
+            top: 60px;
+            height: 2px;
+            background-color: #938e8c;
+            border: none;
+        }
+        .main_content .content_1 {
+            width: 70%;
+        }
+
+        .main_content .content_1 .image_box {
+            width: 100%;
+            height: 301px;
+            margin: 20px 0px;
+            position: relative;
+        }
+
+        .main_content .content_1 .image_box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_content .content_1 .image_box .green_area {
+            position: absolute;
+            background-color: green;
+            opacity: 0.3;
+            left: 0px;
+            top: 0px;
+            width: 191px;
+            height: 100%;
+            /* margin: 20px 0px; */
+            display: inline-block;
+        }
+
+        .main_content .content_1 .image_box .red_area {
+            position: absolute;
+            background-color: pink;
+            opacity: 0.3;
+            right: 0px;
+            top: 0px;
+            width: 191px;
+            height: 100%;
+            /* margin: 20px 0px; */
+            display: inline-block;
+        }
+        .main_content .content_1 h3 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .main_content .content_1 .text_content {
+            width: 32%;
+            float: left;
+            box-sizing: border-box;
+            margin-left:10px;
+            position: relative;
+        } 
+        .main_content .content_1 .text_content:first-child {
+            margin-left: 0px;
+        }
+        .main_content .content_1 .content_all {
+            overflow: auto;
+            display: block;
+            margin-bottom: 40px;
+        }
+        .main_content .content_23 {
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .main_content .content_2{
+            margin-right: 20px;
+        }
+        .main_content .content_2 h2 {
+            font-size: 72px;
+        }
+        .main_content .content_2 h2 span {
+            font-size:42px;
+            line-height: 16px;
+            letter-spacing:-2px;
+        }
+         .main_content .content_2 h3 {
+             font-size: 33px;
+            line-height: 16px;
+            letter-spacing:-2px;
+
+         }
+        .main_content .content_2,.main_content .content_3 {
+            width: 49%;
+            display: inline-block;
+            position: relative;
+            float: left;
+         
+        }
+        .main_content .content_3 .content_3_quote {
+            height: 200px;
+            background-color: #eeedd6;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+        }
+        .main_content .content_3 img {
+            width: 100%;
+            height: 275px;
+        }
+        .main_content .content_3 .content_3_img {
+            position: relative;
+        }
+        .main_content .content_3 .img_bar {
+            background-color: #000;
+            opacity: 0.3;
+            bottom: 0px;
+            height: 40px;
+            width: 100%;
+            position: absolute;
+        }
+        .main_content .content_3 .content_3_quote .box_red {
+            background-color: #d45d5c;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            bottom: 0px;
+        }
+        .main_content .content_3 .content_3_quote .box_red span {
+            height: 92%;
+            display: inline-block;
+            float: left;
+            font-size: 89px;
+            line-height: 92%;
+            margin-left: 21px;
+            border-right: 5px solid;
+            color: #fff;
+            margin-top: 5px;
+        }
+        .main_content .content_3 .content_3_quote .box_quote {
+            background-color: #f5e327;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+
+        footer {
+            margin: 0 auto;
+            text-align: right;
+            height: 50px;
+            line-height: 50px;
+            padding-right: 20px;
+            border-top: 1px solid #938e8c;
+         
+        }
+        footer address {
+              
+        }
+        article aside {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 28%;
+            border-top: 2px solid #cc8091;
+            height: 301px;
+        }
+        article aside .aside_header {
+            margin-top: 30px;
+            margin-left:20px;
+        }
+        article aside .aside_header span {
+            display: inline-block;
+    font-size: 36px;
+    line-height: 29px;
+    border-bottom: 2px solid;
+        }
+        article aside .aside_header p {
+            font-size: 12px;
+            color:grey;
+            letter-spacing:0px;
+            line-height: 10px;
+        }
+        article aside .aside_content {
+            margin-left: 20px;
+        }
+        article aside .aside_content span:first-child{
+            font-size: 130px;
+            font-weight: bold;
+            color: aquamarine;
+        }
+        article aside .aside_content  {
+            position: relative;
+            overflow: auto;
+        }
+        article aside .aside_content section {
+            position: absolute;
+            bottom: 10px;
+            left: 100px;
+        }
+        article aside .aside_content section i {
+            font-size:25px;
+            color:#cc8091;
+        }
+        article aside .aside_content section span {
+            color: grey;
+        }
+        article aside .aside_content l {
+            font-size: 60px;
+            font-weight:bolder;
+            float: left;
+            color:#cc8091;
+        }
+        .content_3_list ul {
+            margin-left: 20px;
+            position: absolute;
+        }
+        .content_3_list ul li {
+            height: 35px;
+        }
+        .content_2_content img {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="red_box">
+            <span>www.baidu.com</span>
+        </section>
+        <section class="data">
+            <span>2018.04.09</span>
+        </section>
+        <hr>
+    </header>
+    <article class="main_content">
+        <section class="content_1">
+            <section class="image_box">
+                <section class="green_area"></section>
+                <img src="./imges/1.jpg" alt="">
+                <section class="red_area"></section>
+            </section>
+            <section class="content_all">
+                <section class="text_content content1">
+                    <h3>what</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis reiciendis, earum animi distinctio illo expedita
+                        asperiores natus sed, iusto adipisci? Animi praesentium optio tempora eos nesciunt excepturi facilis esse.</p>
+                </section>
+                <section class="text_content content2">
+                    <h3>what</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis reiciendis, earum animi distinctio illo expedita
+                        asperiores natus sed, iusto adipisci? Animi praesentium optio tempora eos nesciunt excepturi facilis esse.</p>
+                
+                </section>
+                <section class="text_content content3">
+                    <h3>what</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet corporis reiciendis, earum animi distinctio illo expedita
+                        asperiores natus sed, iusto adipisci? Animi praesentium optio tempora eos nesciunt excepturi facilis esse.</p>
+                </section>
+            </section>
+            
+        </section>
+        <section class="content_23">
+                    <section class="content_2">
+                        <section class="header_content">
+                            <h2>THE<span>Technologe of front</span></h2>
+                            <h3>百度前端领域</h3>
+                            <hr>
+                        </section>
+                        <section class="content_2_content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit pariatur eos fugiat? Dolor doloribus quasi voluptatibus,
+                                maiores asperiores, quia quod eiu<img src="./imges/1.jpg" alt="">s odio, voluptate quisquam quis doloremque ipsum aliquid Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quas itaque veritatis sunt tempore. Commodi neque minus perferendis perspiciatis itaque, adipisci nemo, vero totam dolore similique dolorem alias voluptatum voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vero voluptas, cupiditate enim cum illum qui distinctio laudantium nemo reprehenderit, assumenda animi in tempora tenetur provident itaque sint architecto laboriosam! voluptates Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis reiciendis itaque ut voluptates velit officia modi, repellat eaque est quis perspiciatis dolor eius quos numquam laboriosam commodi reprehenderit mollitia.</p>
+                            
+                        </section>
+                    </section>
+                    <section class="content_3">
+                        <section class="content_3_img">
+                            <section class="img_bar">
+                                <span>前端技术</span>
+                                <span>前端技术</span>
+                            </section>
+                            <img src="./imges/1.jpg" alt="">
+
+                        </section>
+                        <section class="content_3_content">
+                            <section class="content_3_quote">
+                                <section class="content_3_list">
+                                    <ul>
+                                        <li>list1</li>
+                                        <li>list2</li>
+                                        <li>list3</li>
+                                    </ul>
+                                </section>
+                                <section class="box_red">
+                                    <span>0</span>
+                                    <p>one two three lor</p>
+                                </section>
+                                <section class="box_quote">
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+        </section>
+        <aside>
+            <section class="aside_header">
+                <span>ABOUT</span></br>
+                <span>TECHNOLOGN</span>
+                <P>about technologn about technologn about technologn</P>
+            </section>
+            <section class="aside_content">
+                <span><i>700</i></span>
+                <br>
+                <l>3.2</l>
+                <section>
+                    <i>css</i>
+                    <br>
+                    <span>csssssssssssss</span>
+                </section>
+            </section>
+
+        </aside>
+    </article>
+  
+    <footer>
+        <address>whd1073363531@qq.com</address>
+    </footer>
+
+</body>
+<script>
+    //windows：Shift + Alt + F
+</script>
+
+</html>
