@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/index_task7.js"></script>
+    <title>task_7</title>
+    <style>
+        header {
+            width: 100%;
+            height: 50px;
+            background-color: white;
+        }
+
+        #logo {
+            display: inline-block;
+            margin-left: 30px;
+            padding-top: 9.5px;
+        }
+
+        #logo img {
+            float: left;
+
+        }
+
+        #logo section {
+            float: left;
+        }
+
+        #logo section span {
+            line-height: 31px;
+            margin-left: 20px;
+            font-family: "黑体";
+            font-size: 21px;
+            /* font-weight: bold; */
+            letter-spacing: 8px;
+            color: #e74f4d;
+        }
+
+        nav {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        nav ul {
+            float: left;
+        }
+
+        nav ul li {
+            float: left;
+            height: 50px;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        nav ul li:hover {
+            border-bottom: 3px solid #e74f4d;
+            color: #e74f4d;
+
+        }
+
+        nav ul li span {
+            line-height: 50px;
+            font-size: 14px;
+            color: #787b83;
+
+
+        }
+
+        #login {
+            float: right;
+            height: 50px;
+            min-width: 80px;
+            margin-left: 20px;
+        }
+
+        #login img {
+            margin-top: 15px;
+        }
+
+        #login span {
+            line-height: 50px;
+            font-size: 14px;
+            color: #e74f4d;
+            margin-bottom: 2px;
+        }
+
+        article .part_1 .banner {
+            width: 100%;
+            position: relative;
+        }
+
+        article .part_1 .banner img {
+            width: 100%;
+            height: calc(768px - 50px);
+            min-width: 1347px;
+        }
+
+        article .part_1 .banner>span {
+            position: absolute;
+            top: 220px;
+            left: 100px;
+            font-size: 60px;
+            letter-spacing: 7px;
+            font-weight: bold;
+            color: #fff;
+            font-family: "微软雅黑";
+        }
+
+        article .part_1 .banner>p {
+            position: absolute;
+            top: 299px;
+            left: 100px;
+            font-size: 20px;
+            letter-spacing: 7px;
+
+            color: #fff;
+            font-family: "微软雅黑";
+        }
+
+        article .part_1 .banner>p[class="secound_line"] {
+            top: 325px;
+        }
+
+        article .part_1 .banner section {
+            position: absolute;
+            top: 385px;
+            left: 100px;
+            min-width: 330px;
+            height: 65px;
+            background-color: #e74f4d;
+            text-align: center;
+            line-height: 65px;
+            border-radius: 2.5px;
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: 20px;
+        }
+
+        article .part_1 .point_4 {
+            height: 250px;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            min-width: 1347px;
+        }
+
+        article .part_1 .point_4 .point {
+            width: 24.5%;
+            height: 100%;
+            display: inline-block;
+            position: relative;
+
+        }
+
+        article .part_1 .point_4 .point img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        article .part_1 .point_4 .point section {
+            width: 100%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            text-align: center;
+            top: 80%;
+            height: 35px;
+            border-right: 1px solid #d5d5d5;
+        }
+
+        article .part_1 .point_4 .point .last_point {
+            border-right: none;
+        }
+
+        article .part_1 .point_4 .point span {
+            position: absolute;
+            left: 50%;
+            font-size: 14px;
+            transform: translate(-50%, 0);
+            color: #767777;
+        }
+
+        article .part_2 {
+            font-size: 0px;
+        }
+
+        article .part_2 .banner {
+            width: 100%;
+            height: 365px;
+            min-width: 1347px;
+            display: inline-block;
+            background-color: #edecec;
+            position: relative;
+        }
+
+        article .part_2 .banner img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        article .part_2 .banner span {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            font-size: 31px;
+            letter-spacing: 23px;
+            color: #a1a1a1;
+            transform: translate(-50%, -50%);
+        }
+
+        article .part_2 .new_city {
+            width: 100%;
+            height: 350px;
+            min-width: 1347px;
+            background-image: url(./imges_task7/map.png);
+            background-size: cover;
+            filter: sepia(8%);
+            font-family: "微软雅黑";
+            color: #fff;
+            position: relative;
+        }
+
+        article .part_2 .new_city .city_header {
+            font-size: 16px;
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        article .part_2 .new_city .city_header>span {
+            font-size: 21px;
+
+        }
+
+        article .part_2 .new_city .city_header section {
+            text-align: center;
+        }
+
+        article .part_2 .new_city .city_header>p {
+            font-size: 12px;
+        }
+
+        article .part_2 .new_city .form_city {
+            font-size: 16px;
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            left: 50%;
+            bottom: -15%;
+            transform: translate(-50%, 0);
+            text-align: center;
+            float: left;
+        }
+
+        article .part_2 .new_city .form_city .form_area {
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        article .part_2 .new_city .form_city input[type*="text"] {
+            width: 235px;
+            height: 30px;
+            position: relative;
+            z-index: 5;
+            top: 3px;
+            margin-left: 10px;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        article .part_2 .new_city .form_city .input_box_ {
+            width: 235px;
+            margin-right: 25px;
+            float: left;
+        }
+
+        article .part_2 .new_city .form_city .input_box {
+            position: absolute;
+            width: 235px;
+            height: 35px;
+            top: 0px;
+            padding: 10px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        article .part_2 .new_city .form_city .form_area .submit_btn {
+            height: 35px;
+            min-width: 200px;
+            background-color: #e74f4d;
+            color: snow;
+            text-align: center;
+            line-height: 35px;
+            float: left;
+            border-radius: 4px;
+        }
+
+        article .part_2 .new_city .form_city .form_area .submit_btn span {
+
+            font-size: 14px;
+        }
+
+        .form_city .form_area .draw_box {
+
+            width: 235px;
+            border-radius: 5px;
+            position: absolute;
+            top: 40px;
+            height: 140px;
+            background-color: white;
+            z-index: 5;
+            overflow: hidden;
+            display: none;
+        }
+
+        .form_city .form_area .draw_box ul li {
+            height: 35px;
+            box-sizing: border-box;
+            line-height: 35px;
+            padding-left: 20px;
+            color: #000;
+            text-align: left;
+
+        }
+
+        .form_city .form_area .draw_box ul li:hover {
+            background-color: #e74f4d;
+        }
+
+        .form_city .form_area .draw_down {
+            width: 0;
+            height: 0;
+            border-width: 9px;
+            border-style: solid;
+            border-color: #e74f4d transparent transparent transparent;
+            position: absolute;
+            right: 5px;
+            top: 15px;
+            z-index: 10;
+        }
+
+        .active {
+            display: block !important;
+        }
+
+        article .part_3 .one {
+            width: 100%;
+            width: 1347px;
+            height: 610px;
+            background-color: #f7f7f7;
+        }
+
+        article .part_3 .one .imges_all {
+            width: 90%;
+            margin: 0 auto;
+            height: 100%;
+            padding-top: 30px;
+        }
+
+        article .part_3 .one .imges_all .image_frame {
+            width: 21.5%;
+            height: 80%;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 10px 20px;
+            text-align: center;
+
+        }
+
+        article .part_3 .one .imges_all .image_frame>section {
+            height: 90%;
+        }
+
+        article .part_3 .one .imges_all img {
+            border-left: 8px solid #fff;
+            border-top: 14px solid #fff;
+            border-bottom: 20px solid #fff;
+            border-right: 8px solid #fff;
+            box-shadow: 8px 10px 6px #888888;
+        }
+
+        article .part_3 .one .imges_all span {
+            font-size: 16px;
+            display: inherit;
+            letter-spacing: 10px;
+            margin-top: 17px;
+        }
+
+        article .part_3 .one .imges_all p {
+            font-size: 14px;
+            color: #888989;
+            margin-bottom: 15px;
+
+        }
+
+        article .part_3 .one .imges_all_box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        article .part_3 .one .imges_all_box .imges_box {
+            margin-top: 61.5px;
+        }
+
+        article .part_3 .two {
+            width: 100%;
+            min-width: 1347px;
+            height: 580px;
+            background-color: #fff;
+        }
+
+        article .part_3 .two .two_banner {
+            display: inline-block;
+            width: 70%;
+            float: left;
+            height: 580px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        article .part_3 .two .two_banner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        article .part_3 .two .two_banner .banner_content {
+            position: absolute;
+            font-size: 14px;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        article .part_3 .two .two_banner .triangle {
+            width: 0;
+            height: 0;
+            border-width: 20px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: rotate(450deg);
+        }
+
+        article .part_3 .two .two_banner .banner_content span:first-child {
+            font-size: 50px;
+        }
+
+        article .part_3 .two .two_banner .banner_content span {
+            font-size: 100px;
+        }
+
+        article .part_3 .two .two_banner .banner_content p {
+            font-size: 20px;
+        }
+
+        article .part_3 .two .two_content {
+            display: inline-block;
+            width: 30%;
+            height: 580px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        article .part_3 .two .two_content .two_content_box {
+            position: absolute;
+            font-size: 14px;
+            color: #b7b7b7;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        article .part_3 .two .two_content .two_content_box .header {
+            font-size: 25px;
+            color: #000;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        article .part_3 .two .two_content .two_content_box .header>span {
+            color: red;
+        }
+
+        article .part_3 .two .two_content .two_content_box p {
+            margin-bottom: 20px;
+        }
+
+        article .part_3 .two .two_content .two_content_box .btn {
+            display: inline-block;
+            height: 35px;
+            line-height: 35px;
+            min-width: 110px;
+            color: #e74f4d;
+            border-radius: 2px;
+            background-color: #fff;
+            border: 1px solid #e74f4d;
+        }
+
+        article .part_3 .three {
+            width: 100%;
+            height: 580px;
+            min-width: 1347px;
+            background-color: #fff;
+        }
+
+        article .part_3 .three .content {
+            width: 33.3%;
+            height: 100%;
+            display: inline-block;
+        }
+
+        article .part_3 .three .three_content1 {
+            background-color: #e7504d;
+            position: relative;
+        }
+
+        article .part_3 .three .three_content2 {
+            background-color: #f7f7f7;
+            position: relative;
+        }
+
+        article .part_3 .three .three_content3 {
+            background-image: url(./imges_task7/part3_three_img.png);
+            background-size: cover;
+            position: relative;
+        }
+
+        article .part_3 .three .three_content1 .triangle {
+            width: 0;
+            height: 0;
+            border-width: 20px;
+            border-style: solid;
+            border-color: #f7f7f7 transparent transparent transparent;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: rotate(450deg);
+        }
+
+        article .part_3 .three .three_content2 .triangle {
+            width: 0;
+            height: 0;
+            border-width: 20px;
+            border-style: solid;
+            border-color: #f7f7f7 transparent transparent transparent;
+            position: absolute;
+            right: -40px;
+            z-index: 2;
+            top: 50%;
+            transform: rotate(-90deg);
+        }
+
+        article .part_3 .three .content .three_content_box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        article .part_3 .three .content .three_content_box p,
+        article .part_3 .three .content .three_content_box span {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        article .part_3 .three .three_content1 p,
+        article .part_3 .three .three_content1 span {
+            color: #f7f7f7;
+        }
+
+        article .part_3 .three .three_content1 span {
+            margin-top: 40px;
+            display: inline-block;
+            min-width: 165px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 2px;
+            border: 1px solid #edecec;
+        }
+
+        article .part_3 .three .three_content2 p,
+        article .part_3 .three .three_content2 span {
+            color: #e7504d;
+        }
+
+        article .part_3 .three .three_content2 span {
+            margin-top: 40px;
+            display: inline-block;
+            min-width: 165px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 2px;
+            border: 1px solid #e7504d;
+        }
+
+        article .part_4 {
+            width: 100%;
+            height: 750px;
+            min-width: 1347px;
+            background-color: #f7f7f7;
+        }
+
+        article .part_4 .volunteer_header {
+            width: 100%;
+            height: 300px;
+            text-align: center;
+            position: relative;
+            font-size: 12px;
+        }
+
+        article .part_4 .volunteer_header .content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        article .part_4 .volunteer_header .content span {
+            font-size: 26px;
+            display: inline-block;
+            color: #000;
+
+        }
+
+        article .part_4 .volunteer_header .content p {
+            margin-bottom: 20px;
+            color: #aaaaaa;
+        }
+
+        article .part_4 .volunteer_form {
+            width: 100%;
+            height: 450px;
+            text-align: center;
+            position: relative;
+            font-size: 12px;
+
+        }
+
+        article .part_4 .volunteer_form .form_box {
+            min-width: 1100px;
+            width: 80%;
+            margin: 0 auto;
+            height: 100%;
+
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail {
+            min-width: 350px;
+            width: 40%;
+            float: left;
+            height: 100%;
+            text-align: left;
+            padding: 20px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail p {
+            color: #9d9b9a;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail .msg_1,
+        article .part_4 .volunteer_form .form_box .form_detail .msg_2,
+        article .part_4 .volunteer_form .form_box .form_detail .more_msg {
+            position: relative;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail .msg_1>span,
+        article .part_4 .volunteer_form .form_box .form_detail .more_msg>span {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-family: "黑体";
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail .msg_1>span:last-child,
+        article .part_4 .volunteer_form .form_box .form_detail .msg_2>span:last-child,
+        article .part_4 .volunteer_form .form_box .form_detail .more_msg>span:last-child {
+            position: absolute;
+            right: 0px;
+            bottom: -20px;
+            margin: 0px;
+            color: #9d9b9a;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail .msg_1>span>span,
+        article .part_4 .volunteer_form .form_box .form_detail .more_msg>span>span {
+            font-size: 12px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail .msg_2>span {
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-family: "黑体";
+        }
+
+        article .part_4 .volunteer_form .form_box .form_detail .msg_2>span>span {
+            font-size: 12px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_body {
+            min-width: 650px;
+            height: 100%;
+            width: 60%;
+            float: left;
+            padding: 20px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_body .col_1 {
+            height: 40px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_body .row_2 {
+            display: inline-block;
+            float: left;
+            width: 50%;
+            height: inherit;
+            padding: 5px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_body .col_4 {
+            height: 160px;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_body .row_1 {
+            display: inline-block;
+            float: left;
+            width: 100%;
+            padding: 5px;
+            height: inherit;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_body input {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 5;
+            top: 0px;
+            left: 0px;
+            margin-left: 10px;
+            outline: none;
+            border: none;
+            background: none;
+        }
+        article .part_4 .volunteer_form .form_box .form_body textarea {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            position: relative;
+            background: none;
+            padding: 10px;
+            resize: none;
+        }
+
+        article .part_4 .volunteer_form .form_box .form_body .box {
+            width: 100%;
+            height: 100%;
+            background: #ececee;
+            position: relative;
+        }
+        article .part_4 .volunteer_form .form_box .form_body .box>span{
+            line-height: 30px;
+            font-size: 13px;
+        }   
+        footer .connect_me {
+            width: 100%;
+            height: 360px;
+            min-width: 1347px;
+            background-color: #32353e;
+            position: relative;
+        }
+
+        footer .connect_me .connect_me_content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 40%;
+            font-size: 16px;
+            color: #edecec;
+        }
+
+        footer .connect_me .connect_me_content .input_box_ {
+            width: 100%;
+            margin-right: 25px;
+            margin-top: 40px;
+            float: left;
+            position: relative;
+        }
+
+        footer .connect_me .connect_me_content input[type*="text"] {
+            width: 100%;
+            height: 30px;
+            position: relative;
+            z-index: 5;
+            top: 3px;
+            margin-left: 10px;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        footer .connect_me .connect_me_content p:first-child {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        footer .connect_me .connect_me_content .input_box {
+            position: absolute;
+            width: 100%;
+            height: 35px;
+            top: 0px;
+            padding: 10px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        footer .connect_me .connect_me_content .input_box .send_btn {
+            min-width: 100px;
+            height: 35px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            border-radius: 5px;
+            display: inline-block;
+            z-index: 10;
+            background-color: #6f7278;
+        }
+
+        footer .connect_me .connect_me_content .input_box .send_btn span {
+            font-size: 12px;
+            line-height: 35px;
+            position: relative;
+
+        }
+
+        footer .connect_me .connect_me_content .share_icon {
+            float: left;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        footer .connect_me .connect_me_content .share_icon .icon {
+            margin: 0 auto;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+
+        footer address {
+            width: 100%;
+            height: 60px;
+            min-width: 1347px;
+            background-color: #303039;
+        }
+
+        footer address span {
+            color: #edecec;
+            font-size: 12px;
+            line-height: 60px;
+            margin-left: 20px;
+        }
+
+        footer address a {
+            color: #edecec;
+            font-size: 12px;
+            text-decoration: none;
+            text-align: right;
+            position: absolute;
+            right: 0px;
+            line-height: 60px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section id="logo">
+            <img src="./imges_task7/logo.png" alt="">
+            <section>
+                <span>New World</span>
+            </section>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <span>首页</span>
+                </li>
+                <li>
+                    <span>最新活动</span>
+                </li>
+                <li>
+                    <span>项目介绍</span>
+                </li>
+                <li>
+                    <span>爱心社区</span>
+                </li>
+                <li>
+                    <span>关于我们</span>
+                </li>
+            </ul>
+            <section id="login">
+                <img src="./imges_task7/login_icon.png" alt="">
+                <span>登陆</span>
+            </section>
+        </nav>
+    </header>
+    <article>
+        <section class="part_1">
+            <section class="banner">
+                <img src="./imges_task7/banner1.png" alt="">
+                <span>time of new life</span>
+                <p>新时代，年轻人让我们一起</p>
+                <br>
+                <p class="secound_line">体验新生活，享受新生活</p>
+                <section>
+                    <span>开始体验</span>
+                </section>
+            </section>
+            <section class="point_4">
+                <section class="first_point point">
+                    <img src="./imges_task7/point1.png" alt="">
+                    <section>
+                        <span>打造全新世界观，让你更爱你的生活</span>
+                    </section>
+
+                </section>
+                <section class="secound_point point">
+                    <img src="./imges_task7/pint2.png" alt="">
+                    <section>
+                        <span>打造全新世界观，让你更爱你的生活</span>
+                    </section>
+                </section>
+                <section class="third_point point">
+                    <img src="./imges_task7/point3.png" alt="">
+                    <section>
+                        <span>打造全新世界观，让你更爱你的生活</span>
+                    </section>
+                </section>
+                <section class="fourth_point point">
+                    <img src="./imges_task7/point4.png" alt="">
+                    <section class="last_point">
+                        <span>打造全新世界观，让你更爱你的生活</span>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="part_2">
+            <section class="banner">
+                <img src="./imges_task7/banner2.png" alt="">
+                <span>关于新世界，你知道什么？</span>
+            </section>
+            <section class="new_city">
+                <section class="city_header">
+                    <span>查找新世界城市活动信息</span>
+                    <section>
+                        <span>——</span>
+                    </section>
+                    <p>每个城市有不同的活动信息，请自主查询您所需要了解的城市。</p>
+                </section>
+                <section class="form_city">
+                    <section class="form_area">
+
+                        <section class="input_box_">
+                            <section class="input_box city_chioce">
+                                <section class="draw_down"></section>
+                            </section>
+                            <section class="draw_box">
+                                <ul>
+                                    <li>北京</li>
+                                    <li>上海</li>
+                                    <li>深圳</li>
+                                    <li>广州</li>
+                                </ul>
+                            </section>
+                            <input type="text" class="choose_city" readonly="readonly">
+                        </section>
+
+                        <section class="input_box_">
+                            <input type="text" id="mail" placeholder="这是一个文本输入框">
+                            <section class="input_box"></section>
+
+                        </section>
+
+                        <section class="input_box_">
+                            <input type="text" id="mail" placeholder="这是一个文本输入框">
+                            <section class="input_box"></section>
+                        </section>
+                        <section class="submit_btn">
+                            <span>搜索</span>
+                        </section>
+                    </section>
+
+                </section>
+            </section>
+            <section class="part_3">
+                <section class="one">
+                    <section class="imges_all">
+                        <section class="imges_all_box">
+                            <section class="imges_box">
+                                <section class="imge_1 image_frame">
+                                    <img src="./imges_task7/part3_1.png" alt="">
+                                    <span>北京活动</span>
+                                    <p>新社区</p>
+                                </section>
+                                <section class="imge_2 image_frame">
+                                    <span>北京活动</span>
+                                    <p>新社区</p>
+                                    <img src="./imges_task7/part3_2.png" alt="">
+
+                                </section>
+                                <section class="imge_3 image_frame">
+                                    <img src="./imges_task7/part3_3.png" alt="">
+                                    <span>北京活动</span>
+                                    <p>新社区</p>
+                                </section>
+                                <section class="imge_4 image_frame">
+                                    <img src="./imges_task7/part3_4.png" alt="">
+                                    <span>北京活动</span>
+                                    <p>新社区</p>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section class="two">
+                    <section class="two_banner">
+                        <img src="./imges_task7/two_banner.png" alt="">
+                        <section class="banner_content">
+                            <span>新世界</span>
+                            </br>
+                            <span>TIME</span>
+                            <p>@新世界-北京</p>
+                            <p>2016.04.01</p>
+                        </section>
+                        <section class="triangle">
+
+                        </section>
+                    </section>
+                    <section class="two_content">
+                        <section class="two_content_box">
+                            <section class="detail_1">
+                                <span class="header">新世界 /
+                                    <span>01</span>
+                                </span>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla id rerum? Amet, animi
+                                    adipisci voluptatum non, illum dolorem ullam excepturi voluptate optio quaerat, autem
+                                    id aliquam accusantium rerum aspernatur.</p>
+                                <span class="btn">更多详情</span>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section class="three">
+                    <section class="three_content1 content">
+                        <section class="triangle">
+                        </section>
+                        <section class="three_content_box">
+                            <p>新时代</p>
+                            <P>关于爱生活的我们</P>
+                            <p>————</p>
+                            <span>查看更多</span>
+                        </section>
+                    </section>
+                    <section class="three_content2 content">
+                        <section class="triangle">
+                        </section>
+                        <section class="three_content_box">
+                            <p>新时代</p>
+                            <P>关于爱生活的我们</P>
+                            <p>————</p>
+                            <span>查看更多</span>
+                        </section>
+                    </section>
+                    <section class="three_content3 content">
+                        <section class="triangle">
+
+                        </section>
+                        <section class="three_content_box">
+
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="part_4">
+                <section class="volunteer_header">
+                    <section class="content">
+                        <span>成为我们的志愿者</span>
+                        <p>————</p>
+                        <p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情 那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+                    </section>
+                </section>
+                <section class="volunteer_form">
+                    <section class="form_box">
+                        <section class="form_detail">
+                            <section class="msg_1">
+                                <span>新世界志愿者协议</span>
+                                <p>加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ......</p>
+                                <span>
+                                    <img src="./imges_task7/下拉icon.png" alt="">
+                                    <span>more</span>
+                                </span>
+                            </section>
+                            <section class="msg_2">
+                                <span>新世界志愿者协议</span>
+                                <p>加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ......</p>
+                                <span>
+                                    <img src="./imges_task7/下拉icon.png" alt="">
+                                    <span>more</span>
+                                </span>
+                            </section>
+                            <section class="more_msg">
+                                <span>更多条款</span>
+                                <span>
+                                    <img src="./imges_task7/下拉icon.png" alt="">
+                                    <span>more</span>
+                                </span>
+                            </section>
+                        </section>
+                        <section class="form_body">
+                            <section class="col_1">
+                                <section class="row_2">
+                                    <section class="box">
+                                        <input type="text" id="mail" placeholder="这是一个文本输入框">
+                                    </section>
+                                </section>
+                                <section class="row_2">
+                                    <section class="box">
+                                        <input type="text" id="mail" placeholder="这是一个文本输入框">
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="col_1">
+                                <section class="row_2">
+                                    <section class="box">
+                                        <input type="text" id="mail" placeholder="这是一个文本输入框">
+                                    </section>
+                                </section>
+                                <section class="row_2">
+                                    <section class="box">
+                                        <input type="text" id="mail" placeholder="这是一个文本输入框">
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="col_4">
+                                <section class="row_1">
+                                    <section class="box">
+                                        <textarea type="text" ></textarea>
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="col_1">
+                                <section class="row_1">
+                                     <section class="box">
+                                         <span>提交申请</span>
+                                     </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+    </article>
+    <footer>
+        <section class="connect_me">
+            <section class="connect_me_content">
+                <p>联系我们</p>
+                <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯 也可以通过以下任何方式关注我们动态</p>
+                <section class="input_box_">
+                    <input type="text" id="mail" placeholder="这是一个文本输入框">
+                    <section class="input_box">
+                        <section class="send_btn">
+                            <span>订阅</span>
+                        </section>
+                    </section>
+                </section>
+                <section class="share_icon">
+                    <section class="icon">
+                        <img src="./imges_task7/QQ.png" alt="">
+                    </section>
+                    <section class="icon">
+                        <img src="./imges_task7/twitter.png" alt="">
+                    </section>
+                    <section class="icon">
+                        <img src="./imges_task7/brower.png" alt="">
+                    </section>
+                    <section class="icon">
+                        <img src="./imges_task7/weibo.png" alt="">
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <address>
+            <span>@2018新世界</span>
+            <a href="#">back to top</a>
+        </address>
+    </footer>
+</body>
+<script>
+    $(document).ready(function () {
+        function Main_() {
+            this.clickBox = $(" .choose_city"); //点击触发下拉元素
+            this.draw_box = $(".input_box_ .draw_box");
+            this.draw_li_arr = $(".draw_box  ul li");
+        }
+        Main_.prototype = {
+            clickEvent: function () {
+                let that = this;
+                //下拉框点击事件
+                that.clickBox.each(function () {
+                    $(this).on("click", function () {
+                        that.draw_box.toggleClass("active");
+                    });
+                });
+                that.draw_li_arr.each(function () {
+                    $(this).on("click", function () {
+                        that.draw_box.toggleClass("active");
+                        that.clickBox.val(this.innerHTML);
+                    });
+                });
+                $(document)
+                    .on('click', function (e) {
+                        let a = $(e.target)[0];
+                        //这里最主要的问题是，必须把点击的对象转换为可以与下拉框输入框对比确认的元素，以此作为判断‘条件’
+                        if ($(e.target)[0] != that.draw_box[0] && $(e.target)[0] != that.clickBox[0]) {
+                            that.draw_box.removeClass("active");
+                        }
+                    });
+            }
+        }
+
+
+        main = new Main_();
+        main.clickEvent();
+
+
+
+    });
+</script>
+
+</html>
