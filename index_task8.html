@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="./css/task8.css"> -->
+    <title>Grid</title>
+    <style>
+        html,
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+body {
+    background-color: #fff;
+}
+
+section {
+    border: 1px solid #242424;
+}
+
+.container {
+    /* 标记容器，这是一个网格化布局的容器 */
+    width: 100%;
+    max-width: 1200px;
+}
+.row:before,
+.row:after {
+    /* 行元素的目的是保持其中的列不会溢出到其他行上 */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 24.99%;
+}
+
+.col-4 {
+    width: 33.32%;
+}
+
+.col-5 {
+    width: 41.65%;
+}
+
+.col-6 {
+    width: 49.98%;
+}
+.col-8 {
+    width: 66.64%;
+}
+
+
+
+[class*='col-'] {
+    /* 防止浮动的box重叠在一起，给每个col元素设置最小宽度并且使其浮动 */
+    float: left;
+    min-height: 1px;
+    /*-- our gutter --*/
+    padding: 12px;
+}
+.color_box {
+    background: #646464;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+ @media all and (max-width:768px) {
+     .col-1 {
+         width: 20%;
+     }
+     .col-2 {
+         width: 10%;
+     }
+     .col-3 {
+         width: 24.99%;
+     }
+     .col-4 {
+         width: 50%;
+     }
+     .row .col-4:last-child {
+         width: 100%;
+     }
+     .col-5 {
+         width: 100%;
+     }
+     .col-6 {
+         width: 49.98%;
+     }
+     .last_row .col-1 {
+         width: 16.66%;
+     }
+     .last_row .col-2 {
+         width: 66.64%;
+     }
+     .last_row .col-2:last-child{
+         width: 24.99%;
+     }
+      .last_row .col-6 {
+         width : 24.99%;
+      }
+ }
+    </style>
+</head>
+
+<body>
+    <section class="grid-container outline">
+        <section class="row">
+            <section class="col-4">
+                <p>col-1</p>
+            </section>
+            <section class="col-4">
+                <p>col-1</p>
+            </section>
+            <section class="col-4">
+                <p>col-1</p>
+            </section>
+        </section>
+        <section class="row">
+            <section class="col-3">
+                <p>col-2</p>
+            </section>
+            <section class="col-6">
+                <p>col-2</p>
+            </section>
+            <section class="col-3">
+                <p>col-2</p>
+            </section>
+        </section>
+        <section class="row last_row">
+            <section class="col-1">
+                <p>col-3</p>
+            </section>
+            <section class="col-1">
+                <p>col-3</p>
+            </section>
+            <section class="col-2">
+                <p>col-3</p>
+            </section>
+            <section class="col-2">
+                <p>col-3</p>
+            </section>
+            <section class="col-6">
+                <p>col-3</p>
+            </section>
+        </section>
+    </section>
+
+    <hr/>
+</body>
+
+</html>
